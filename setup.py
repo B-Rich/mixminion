@@ -22,7 +22,7 @@ if getattr(sys, 'platform', None) == 'win32':
 if not hasattr(sys, 'version_info') or sys.version_info < (2, 0, 0):
     print "Sorry, but I require Python 2.0 or higher."
     sys.exit(1)
-if sys.version_info[:3] == (2,1,0) or sys.version_info == (2,1,1):
+if sys.version_info[:3] in (2,1,0), (2,1,1):
     print "Python 2.1.%d has known bugs that keep Mixminion from working."%sys.version_info[2]
     print "Maybe you should upgrade to 2.1.3 or some more recent version."
     sys.exit(1)
